@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="读书笔记,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第零章 计算机概论计算机：辅助人脑的好工具计算机的定义：  接收使用者输入指令与数据，经由中央处理器的数字与逻辑单元运算处理后，以产生或储存有用的信息。  计算机硬件的五大单元计算机的组成部分：  输入单元：键盘、鼠标、读卡器、扫描仪、手写板、触摸屏等； 主机部分：系统单元，被主机机壳保护住了，里面含有 CPU 与主内存等； 输出单元：屏幕、打印机等  中央处理器(Central Processi">
+<meta name="keywords" content="读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）">
+<meta property="og:url" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/index.html">
+<meta property="og:site_name" content="老易的博客">
+<meta property="og:description" content="第零章 计算机概论计算机：辅助人脑的好工具计算机的定义：  接收使用者输入指令与数据，经由中央处理器的数字与逻辑单元运算处理后，以产生或储存有用的信息。  计算机硬件的五大单元计算机的组成部分：  输入单元：键盘、鼠标、读卡器、扫描仪、手写板、触摸屏等； 主机部分：系统单元，被主机机壳保护住了，里面含有 CPU 与主内存等； 输出单元：屏幕、打印机等  中央处理器(Central Processi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/x99-chipset-block-diagram.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/AMD-chipset-architecture.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/hard-drive-structure.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/disk-structure.png">
+<meta property="og:updated_time" content="2018-02-25T07:12:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）">
+<meta name="twitter:description" content="第零章 计算机概论计算机：辅助人脑的好工具计算机的定义：  接收使用者输入指令与数据，经由中央处理器的数字与逻辑单元运算处理后，以产生或储存有用的信息。  计算机硬件的五大单元计算机的组成部分：  输入单元：键盘、鼠标、读卡器、扫描仪、手写板、触摸屏等； 主机部分：系统单元，被主机机壳保护住了，里面含有 CPU 与主内存等； 输出单元：屏幕、打印机等  中央处理器(Central Processi">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/x99-chipset-block-diagram.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/">
+
+
+
+
+
+  <title>《鸟哥的Linux私房菜：基础学习篇》读书笔记（一） | 老易的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">老易的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大口吃瓜 快意飞马</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老易">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="老易的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-25T14:53:42+08:00">
+                2018-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第零章-计算机概论"><a href="#第零章-计算机概论" class="headerlink" title="第零章 计算机概论"></a>第零章 计算机概论</h1><h2 id="计算机：辅助人脑的好工具"><a href="#计算机：辅助人脑的好工具" class="headerlink" title="计算机：辅助人脑的好工具"></a>计算机：辅助人脑的好工具</h2><p>计算机的定义：</p>
+<blockquote>
+<p>接收使用者输入指令与数据，经由中央处理器的数字与逻辑单元运算处理后，以产生或储存有用的信息。</p>
+</blockquote>
+<h3 id="计算机硬件的五大单元"><a href="#计算机硬件的五大单元" class="headerlink" title="计算机硬件的五大单元"></a>计算机硬件的五大单元</h3><p>计算机的组成部分：</p>
+<ul>
+<li>输入单元：键盘、鼠标、读卡器、扫描仪、手写板、触摸屏等；</li>
+<li>主机部分：系统单元，被主机机壳保护住了，里面含有 CPU 与主内存等；</li>
+<li>输出单元：屏幕、打印机等</li>
+</ul>
+<p>中央处理器(Central Processing Unit, CPU)</p>
+<blockquote>
+<p>CPU 为一个具有特定功能的芯片， 里头含有微指令集。主要功能在于管理和运算。</p>
+</blockquote>
+<p>CPU 分为两个主要单元：</p>
+<ul>
+<li>算数逻辑单元：主要负责程序运算与逻辑判断</li>
+<li>控制单元：主要在协调周边各组件与个单元间的工作</li>
+</ul>
+<p>CPU 处理数据流流向</p>
+<blockquote>
+<p>输入单元-&gt;主内存-&gt;CPU-&gt;主内存-&gt;输出单元</p>
+</blockquote>
+<p>计算机的五大单元：</p>
+<ul>
+<li>输入单元</li>
+<li>输出单元</li>
+<li>CPU 控制单元</li>
+<li>CPU 算数与逻辑单元</li>
+<li>主内存</li>
+</ul>
+<h3 id="CPU-的种类"><a href="#CPU-的种类" class="headerlink" title="CPU 的种类"></a>CPU 的种类</h3><ul>
+<li>精简指令集(Reduced Instruction Set Computer, RISC)<ul>
+<li>指令集精简，指令执行时间短，完成的动作单纯，效率高；</li>
+<li>复杂工作需要多个指令来完成；</li>
+<li>常见的 RISC CPU：<ul>
+<li>SUN 公司的SPARC系列：学术领域的大型工作站、银行金融体系的主要服务器</li>
+<li>IBM 公司的 Power Architecture (包括 Power PC )系列 Sony公司的 Play Station 系列主机</li>
+<li>ARM 各厂牌手机、导航、PDA、交换机、路由器等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复杂指令集(Complex Instruction Set Computer, CISC)<ul>
+<li>每条指令可以执行一些比较底层的硬件操作，指令数目多且复杂，长度并不相同，花费时间长，处理的工作较为丰富；</li>
+<li>常见的 CISC CPU 主要由 Intel AMD VIA 等x86架构的CPU<ul>
+<li>x86 架构<ul>
+<li>由于Intel最初开发的 CPU 代号是 8086 ，后来依据此架构相继生产的代号分别是80286，80386…等，所以这种架构就被称为 x86 架构了</li>
+</ul>
+</li>
+<li>x86_64 架构<ul>
+<li>由 AMD 公司在之前 Intel 的8位、16位和32位的基础上改进升级为64位，为了区别两者差异所以改名为 x86_64</li>
+</ul>
+</li>
+<li>区别<ul>
+<li>CPU 整体结构：如二级缓存，每次运作可执行的命令数</li>
+<li>微指令集的不同：x86_64 架构大多含有更先进的指令集，可以加速多媒体的运行，也能加强虚拟化的性能，而且某些指令集可以降低 CPU 功耗。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="周边设备"><a href="#周边设备" class="headerlink" title="周边设备"></a>周边设备</h3><p>单有CPU无法运行计算机，还需要其他周边的设备才能进行实际的操作。周边设备中最重要的是主板，通过主板可以将CPU与各个设备连接起来。</p>
+<p>其他重要的设备还有：</p>
+<ul>
+<li>系统单元：包括CPU与内存及主板相关原件</li>
+<li>存储单元：内存(main memory, RAM)与辅助内存，辅助内存包括硬盘，软盘、光盘、磁带等。</li>
+<li>输入输出单元：同时涵盖输入输出功能的设备目前主要由触摸显示屏。单纯输入设备</li>
+</ul>
+<h3 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h3><p>将一个电脑比作人体</p>
+<ul>
+<li>CPU = 脑袋：每个人会做的事情不一样（微指令集的差异），但主要都是通过脑袋来判断和控制身体各部分的活动的</li>
+<li>主内存 = 脑袋中的记录区块：实际活动过程中，脑袋能将和外界的互动暂时j记录下来，提供给 CPU 来进行运算</li>
+<li>硬盘 = 脑袋中的记忆区块：将重要的数据记录下来以便下次继续使用</li>
+<li>主板 = 神经系统：将所有的组件连接起来，在 CPU 发出命令后传达到各个组件进行活动</li>
+<li>各项周边设备 = 人体与外界沟通的手、脚、皮肤、眼睛等：与外界互动的关键</li>
+<li>显卡 = 脑袋中的影像：将来自眼睛的信号传达到脑袋中呈现所以显卡的数据也是由CPU控制的</li>
+<li>电源 = 心脏：所有的组件要能运作得要有足够的电力供给才行</li>
+</ul>
+<h3 id="计算机分类"><a href="#计算机分类" class="headerlink" title="计算机分类"></a>计算机分类</h3><ul>
+<li>超级计算机</li>
+<li>大型计算机</li>
+<li>迷你计算机</li>
+<li>工作站</li>
+<li>微计算机</li>
+</ul>
+<h3 id="计算机上常用的计算单位"><a href="#计算机上常用的计算单位" class="headerlink" title="计算机上常用的计算单位"></a>计算机上常用的计算单位</h3><ul>
+<li>容量单位 K M G T P</li>
+<li>速度单位 Hz</li>
+</ul>
+<h2 id="个人计算机架构与周边设备"><a href="#个人计算机架构与周边设备" class="headerlink" title="个人计算机架构与周边设备"></a>个人计算机架构与周边设备</h2><p>作为PC界两大CPU巨头，Intel和AMD在CPU的架构设计上有所不同，所以其对应的芯片组结构也会有差异</p>
+<ul>
+<li><p>Intel CPU 芯片组</p>
+<ul>
+<li>北桥：负责连接速度较快的CPU内存和显卡等组件，现在几乎所有的北桥（Intel/AMD）都集成在CPU上。</li>
+<li>南桥：负责连接速度较慢的设备如硬盘U盘网卡等</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/x99-chipset-block-diagram.jpg" alt="Intel x99 架构芯片组"></p>
+<ul>
+<li>AMD CPU 芯片组</li>
+</ul>
+<blockquote>
+<p>AMD与Intel芯片组的架构的区别在于内存直接与CPU沟通而不通过北桥，加速了CPU与内存的沟通</p>
+</blockquote>
+<p><img src="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/AMD-chipset-architecture.jpg" alt="AMD 架构芯片组"></p>
+<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><blockquote>
+<p>CPU的频率：每秒钟CPU可以工作的次数</p>
+</blockquote>
+<ul>
+<li>CPU的“外频”与“倍频”<ul>
+<li>外频：CPU与外部组件进行传输的速度</li>
+<li>倍频：CPU内部用来加速性能的倍数</li>
+<li>CPU频率：外频与倍频相乘才是CPU的频率</li>
+<li>关于超频：CPU倍频在出厂时被锁定，发烧玩家可以通过改变主板参数来调整CPU的外频来达到超频的效果</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>现在Intel的CPU会主动进行超频的工作，通过Intel的turbo技术，在需要大量运算需求时进行超频，在运算需求较低时会降频。</p>
+</blockquote>
+<ul>
+<li>32位与64位的CPU与“总线宽度”<ul>
+<li>系统总线：北桥的系统总线，传输速度较快</li>
+<li>I/O总线：南桥的系统总线，主要联系硬盘、USB、网卡等设备</li>
+<li>总线宽度：现在一般分为32位和64位</li>
+<li>前端系统总线速度(Front Side Bus,FSB)：北桥支持的频率，FSB*总线宽度即每秒传输的最大数据量。</li>
+<li>字长(Word Size)：CPU单次能够处理的数据的大小，分为32位和64位。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>现在我们所说的32位和64位计算机说的都是CPU的字长。而由于字长的限制，32位计算机能从内存传来的数据量有限，这就是为什么32位的系统最多只支持4GB内存的原因了。</p>
+<p>CPU的字长也可以和总线宽度不一致，例如在32位CPU的时期也可以设计出总线宽度位64位的芯片组，但还是称之为32位CPU。</p>
+</blockquote>
+<ul>
+<li>CPU等级<ul>
+<li>i586等级：Intel Pentium MMX与AMD K6时代的CPU</li>
+<li>i686等级：Intel Celeron与AMD Athlon(K7)时代之后的32位CPU</li>
+<li>x86_64等级：目前的64位CPU统称</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>目前很多程序都有对CPU做最优化的设计，比如x86_64可以安装586的软件（向下兼容），但x86_64的应用程序不能装载868等级以下的电脑中。</p>
+</blockquote>
+<ul>
+<li>超线程<ul>
+<li>原理：CPU在执行单线程任务时，并不是核心内的每一个单元都在工作，超线程技术就是让那些闲置的执行单元去另一个线程工作。</li>
+<li>实现：每个CPU内部将重要的寄存器(register)分成两群，而让程序分别使用这两群寄存器。也就是说，可以有两个程序“同时竞争CPU的运算单元”，而非通过操作系统的多任务切换。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>超线程的初衷是为了提高运算性能，但在有些情况下可能会导致性能降低。</p>
+</blockquote>
+<h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><blockquote>
+<p>个人电脑内存的主要组件为动态随机访问内存(Dynaimic Random Access Memory,DRAM)</p>
+</blockquote>
+<ul>
+<li>双通道设计：北桥总线宽度目前一般最多达到64位，启用双通道设计同时插入两个型号详尽的内存可以让北桥的总线宽度翻倍达到128位，这就是双通道设计的理念。</li>
+</ul>
+<blockquote>
+<p>服务器所需要的速度更快，因此除了双通道之外，中介服务器也经常提供三通道甚至四通道的内存环境</p>
+</blockquote>
+<ul>
+<li>CPU频率与内存的关系：理论上应选择CPU频率与内存外频一致，但由于技术提升可能会产生不一致的情况，此时应保持CPU的外频与内存外频一致。</li>
+<li>DRAM与SRAM<ul>
+<li>二级缓存(L2 cache)：整合在CPU内，存储一些常用的数据，CPU如果需要使用就不需要通过北桥，速度和性能会大大提高。</li>
+<li>静态随机访问存储器(Static Random Access Memory)：常用的DRAM访问速度不够满足二级缓存的读写速度，SRAM通过其大规模的晶体管电路可以很好解决这个问题</li>
+</ul>
+</li>
+<li>只读内存(Read Only Memory, ROM)<ul>
+<li>CMOS(互补式金属氧化物半导体)：在主板上用于记录各个组件的控制参数，需要借助一颗电池提供电源来保留参数。</li>
+<li>BIOS(Basic Input Output System)：是一套写死在主板只读内存(Read Only Memory, ROM)上的程序，这套程序负责向CMOS读取和写入相关信息。</li>
+<li>固件(firmware)很多也是使用ROM来进行软件的写入的。固件像软件一样也是一个被电脑所执行的程序，然而他是对硬件内部而言更加重要的部分。例如BIOS就是一个固件，阮然对于我们日常操作没有太大关系，但它却控制着开机时各项硬件参数的取得。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>现在的BIOS为了更新方便，一般使用闪存(flash)或者EEPROM来取代CMOS。</p>
+</blockquote>
+<h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><ul>
+<li>显卡用于处理图形的显示，重点在于解析度和色彩的深度</li>
+<li>显卡内存：每个图像都会占用一定的内存，所以在显卡上也会有一定大小的内存，内存大小影响最终的屏幕解析度和色彩深度</li>
+<li>GPU：早期的图像处理是交给CPU进行运算的，但由于3D、VR的流行，显卡的运算能力也越来越重要，所以在显卡中也会有一个专门的运算单元来处理图形图像，这就是GPU</li>
+<li>PCIe：用于连接显卡与北桥的接口标准。使用类似管线的概念来处理，在PCIe第一版中，每条管线可以具有250MBytes/s的贷款性能，管线越多(通常涉及到x16管线)则总带宽越高。</li>
+</ul>
+<h3 id="硬盘与存储设备"><a href="#硬盘与存储设备" class="headerlink" title="硬盘与存储设备"></a>硬盘与存储设备</h3><ul>
+<li>硬盘的物理组成<ul>
+<li>磁盘</li>
+<li>磁头(Head)</li>
+<li>盘片转轴及控制电机</li>
+<li>磁头控制器</li>
+<li>数据转换器</li>
+<li>接口</li>
+<li>缓存</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/hard-drive-structure.jpg" alt="硬盘结构"></p>
+<ul>
+<li>磁盘上的数据<ul>
+<li>磁道：当磁盘旋转时，磁头若保持在一个位置上，则每个磁头都会在磁盘表面划出一个圆形轨迹，这些圆形轨迹就叫做磁道（Track）。</li>
+<li>柱面：在有多个盘片构成的盘组中，由不同盘片的面，但处于同一半径圆的多个磁道组成的一个圆柱面（Cylinder）。</li>
+<li>扇区：磁盘上的每个磁道被等分为若干个弧段，这些弧段便是硬盘的扇区（Sector），每个扇区的大小都是512Bytes，也有大容量硬盘设计成4KByte的扇区。硬盘的第一个扇区，叫做<a href="https://zh.wikipedia.org/wiki/%E5%BC%95%E5%AF%BC%E6%89%87%E5%8C%BA" target="_blank" rel="noopener">引导扇区</a>。</li>
+<li>硬盘大小计算公式</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>磁头数量 <em> 每个header负责的磁柱数量 </em> 每个磁柱所含有的磁区数量 * 磁区的容量</p>
+</blockquote>
+<p><img src="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/disk-structure.png" alt="磁盘结构"></p>
+<ul>
+<li><p>数据接口</p>
+<ul>
+<li>(ATA)IDE接口：全称Advanced Technology Attachment，是用传统的40-pin并口数据线连接主板与硬盘的，接口速度最大为133MB/s，因为并口线的抗干扰性太差，且排线占用空间较大，不利电脑内部散热，已逐渐被SATA所取代。</li>
+<li>SATA接口：全称Serial ATA，也就是使用串口的ATA接口，因抗干扰性强，且对数据线的长度要求比ATA低很多，支持热插拔等功能，SATA-II的接口速度为300MiB/s，而新的SATA-III标准可达到600MiB/s的传输速度。SATA的数据线也比ATA的细得多，有利于机箱内的空气流通，整理线材也比较方便。</li>
+<li>SCSI接口：全称是Small Computer System Interface（小型机系统接口），经历多代的发展，从早期的SCSI-II，到目前的Ultra320 SCSI以及Fiber-Channel（光纤通道），接口型式也多种多样。SCSI硬盘广为工作站级个人电脑以及服务器所使用，因此会使用较为先进的技术，如碟片转速15000rpm的高转速，且资料传输时CPU占用率较低，但是单价也比相同容量的ATA及SATA硬盘更加昂贵。</li>
+<li>SAS接口：全称Serial Attached SCSI，是新一代的SCSI技术，和SATA硬盘相同，都是采取序列式技术以获得更高的传输速度，可达到6Gb/s。此外也透过缩小连接线改善系统内部空间等</li>
+<li>FC接口：全称Fibre Channel，光纤通道接口。拥有此接口的硬盘在使用光纤联接时具有热插拔性、高速带宽（4Gb/s或10Gb/s）、远程连接等特点；内部传输速率也比普通硬盘更高。限制于其高昂的售价，通常用于高端服务器领域。</li>
+<li>USB接口：最常见的外接式接口，传输速度较慢，实际读写速度（USB3.0/3.1）只有100MBytes/s左右。</li>
+<li>固态硬盘(Solid State Disk, SSD)<ul>
+<li>读写速度快，不需要马达转动，直接通过内存直接读写，没有数据延迟</li>
+<li>省电</li>
+<li>有写入次数限制，通常寿命大概两年</li>
+<li>使用被封或者是RAID机制来防止SSD损毁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>选购与转运须知</p>
+<ul>
+<li>容量：这个不用说了。</li>
+<li>缓存：硬盘上头含有一个缓冲内存，这个内存主要可以将硬盘内常使用的数据缓存起来，以加速系统的读取效能。 通常这个缓冲内存越大越好，因为缓冲内存的速度要比数据从硬盘盘中被找出来要快的多了！</li>
+<li>转速：因为硬盘主要是利用主轴马达转动磁碟盘来存取，因此转速的快慢会影响到效能。 主流的桌上型计算机硬盘为每分钟7200转，笔记型计算机则是5400转。有的厂商也有推出高达10000转的硬盘， 若有高效能的数据存取需求，可以考虑购买高转速硬盘。（当然，如果使用SSD硬盘就无需考虑转速）</li>
+<li>转运须知：由於硬盘内部机械手臂上的磁头与硬盘盘的接触是很细微的空间， 如果有抖动或者是脏污在磁头与硬盘盘之间就会造成数据的损毁或者是实体硬盘整个损毁～ 因此，正确的使用计算机的方式，应该是在计算机通电之后，就绝对不要移动主机，并免抖动到硬盘， 而导致整个硬盘数据发生问题啊！另外，也不要随便将插头拔掉就以为是顺利关机！因为机械手臂必须要归回原位， 所以使用操作系统的正常关机方式，才能够有比较好的硬盘保养啊！因为他会让硬盘的机械手臂归回原位啊！</li>
+</ul>
+</li>
+</ul>
+<h3 id="扩展卡与接口"><a href="#扩展卡与接口" class="headerlink" title="扩展卡与接口"></a>扩展卡与接口</h3><ul>
+<li>当前主要的扩展接口标准为PCIe，具有带宽高的优点，几乎现在所有的主板上都使用PCIe接口标准的扩展卡，也会保留PCI插槽以向下兼容。</li>
+<li>现在的主板通常已经整合了相当多的设备了包括声卡、网卡、USB控制卡、网卡、磁盘阵列卡等。</li>
+<li>PCIe有不同的通道数，基本上常见的就是x1,x4,x8,x16等，个人主板常见的是x16。中级服务器大多有多个x8接口，x16反而少见。</li>
+<li>多信道卡(如x8卡)安装在少信道插槽(如x4)的可用性<ul>
+<li>CPU对多仅能支持16个PCIe3.0的信道数</li>
+<li>有些主板设计有3个x16的插槽，前面一个是CPU支持的，后面两个是南桥提供的PCIe2.0的接口</li>
+<li>后面两个x16插槽只有x8或x4的通道数，其他都是空的，如果在这里插入x16卡，则只能满足其实际通道数的性能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h3><ul>
+<li><p>发挥扩展卡性能需考虑的插槽位置</p>
+<ul>
+<li>在安插卡时需要阅读主板的逻辑示意图，把带宽需求大的卡插入直接与CPU相连的插槽，贷款需求量相对较小的卡插入与南桥相连的插槽</li>
+</ul>
+</li>
+<li><p>设备I/0地址与中断请求(Interupt request, IRQ)</p>
+<ul>
+<li>I/O地址：类似于设备的门牌号码，每个设备都有自己的地址，一般来说不能有两个设备使用同一个I/O地址。</li>
+<li>中断请求(Interupt request, IRQ)：按照上面的比喻，IRQ相当于各个门派连接到邮件中心(CPU)的专门路径。各个设备可以通过IRQ中断信道来告知CPU该设备的工作情况，可以方便CPU进行工作分配的任务。</li>
+</ul>
+</li>
+<li><p>CMOS与BIOS</p>
+<ul>
+<li>CMOS：主要的功能为记录主板上的重要参数，包括系统时间、CPU电压频率、各项设备的I/O地址与IRQ等，由于这些数据的记录要花费电力，所以在主板上才有电池。</li>
+<li>BIOS：为写入到主板上某一块flash或EEPROM的程序，它可以在开机的时候执行，用于载入CMOS当中的参数，并尝试调用储存设备中的开机程序，进一步进入操作系统。<blockquote>
+<p>BIOS也可以修改CMOS中的数据。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>连接周边设备的接口</p>
+<ul>
+<li>PS/2接口：元贝常见的键盘和鼠标的接口，不过目前逐渐被USB取代。</li>
+<li>USB接口：目前只剩下USB2.0余USB3.0，为了方便区分，USB3.0为蓝色接口。</li>
+<li>声音输入输出与麦克风</li>
+<li>RJ-45网口</li>
+<li>HDMI：用于高清影像与声音传输</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据表示方式"><a href="#数据表示方式" class="headerlink" title="数据表示方式"></a>数据表示方式</h2><h3 id="数字系统"><a href="#数字系统" class="headerlink" title="数字系统"></a>数字系统</h3><ul>
+<li>二进制</li>
+<li>十进制</li>
+<li>八进制</li>
+<li>十六进制</li>
+</ul>
+<h3 id="文字编码系统"><a href="#文字编码系统" class="headerlink" title="文字编码系统"></a>文字编码系统</h3><ul>
+<li>计算机上储存数据都是用0与1表示，如果想要让他显示文字，需要通过编码系统(字码对照表)</li>
+<li>当文字陷入文件时，会先把文字按照编码对照表转成数字之后再进行保存，屏幕上出现的乱码是因为编码对照表的翻译出错导致产生的误差</li>
+<li>常用的英文编码表为ASCII系统，每个符号(英文、数字或符号)都会占用1Bytes的空间，因此会有2^8=256种变化</li>
+<li>中文的编码系统早起最常用的就是big5编码表（繁体中文），每个中文字占用2Bytes，理论上最多可以有2^16=65526个中文字。但是因为并不是所有的位都拿来对应中文，所以实际并不能达到这么多。目前big5之定义了一万三千多个中文字，所以很多中文是无法显示的。</li>
+<li>国际组织ISO/IEC制定了Unicode编码系统(UTF-8)，这个编码系统打破了所有国家的不同编码。</li>
+</ul>
+<h2 id="软件程序运行"><a href="#软件程序运行" class="headerlink" title="软件程序运行"></a>软件程序运行</h2><h3 id="机器程序与编译程序"><a href="#机器程序与编译程序" class="headerlink" title="机器程序与编译程序"></a>机器程序与编译程序</h3><ul>
+<li>需要交代CPU工作任务就需要参考它的微指令集内容，撰写CPU能读懂的指令码，这样CPU就能运行，不过这样的流程有几个麻烦的地方：<ul>
+<li>需要了解机器语言：机器只认识0与1，因此必须要直接写给机器看，非常难！</li>
+<li>了解所有硬件的相关功能函数：因为程序必须要写给机器看，当然就要参考机器本身，针对功能写程序码。</li>
+<li>程序不具有便携性：每个CPU都具有独特的微指令集，同样，每个硬件都有其功能函数。因此在A电脑上写的程序，理论上是没有办法在B电脑上运行的。况且程序码是非常难修改的。</li>
+<li>程序具有专一性：程序必须要针对硬件功能函数来撰写，如果已经开发了一个浏览器程序，想要在开发文件管理程序，还是得从头参考硬件功能函数撰写。</li>
+</ul>
+</li>
+<li>为了解决这几个问题，设计出了高级语言以及编译器来把语言翻译成机器语言。</li>
+</ul>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ul>
+<li>操作系统(Operating System)与内核(Kernel)<ul>
+<li>操作系统(Operating System, OS)：是一组程序，用于管理电脑的所有活动以及驱动系统中的所有硬件，硬件的所有动作都必须要通过操作系统来完成。</li>
+<li>内核(Kernel)：也是一组程序，主要管控硬件与提供相关的能力(例如存取硬盘、网络功能、CPU资源获取等)。</li>
+<li>内核程序放置在内存中的区块是受保护的，并且开机后就一直常驻在内存当中。如果使用者不小心将内核程序停止或破坏，将会导致整个系统崩溃。</li>
+</ul>
+</li>
+<li>系统调用(System Call)<ul>
+<li>操作系统提供了一整组的开发接口(系统调用层)给工程师来开发软件，工程师只需要遵守开发接口即可，不用再根据核心的函数来进行开发了</li>
+<li>一些概念<ul>
+<li>操作系统的内核层直接参考硬件规格写成，所以同一个操作系统不能够在不一样硬件架构下运行。举个例子：个人版Windows8.1系统不能直接在ARM架构的电脑下运行。</li>
+<li>操作系统知识在管理整个硬件资源，包括CPU、内存、输入输出设备以及文件系统文件。如果没有其他的应用程序辅助，操作系统只能让电脑主机准备就绪(Ready)而已。</li>
+<li>应用程序的开发都是参考操作系统提供的开发接口，所以应用程序只能在该操作系统上运行，不能在其他操作系统上运行。</li>
+</ul>
+</li>
+<li>内核功能<ul>
+<li>系统调用接口(System call interface)：为了方便程序开发者开一轻易地通过与核心的沟通，将硬件的资源进一步利用。</li>
+<li>程序管理(Process control)：内核必须要能够控制多个任务环境下CPU资源的有效分配。另外，良好的CPU调度机制将会有效加快整体系统性能。</li>
+<li>内存管理(Memory management)：内核控制整个系统的内存管理，通常内核会提供虚拟内存的功能，当内存不足时可以提供内存交换(swap)功能。</li>
+<li>文件系统管理(Filesystem management)：内核长官文件系统，例如数据的输入输出等工作，以及不同文件格式的支持。</li>
+<li>设备驱动(Device drivers)：硬件的管理是内核的主要工作之一，当然设备的驱动程序就是内核需要做的事情。</li>
+</ul>
+</li>
+<li>操作系统与驱动程序<ul>
+<li>操作系统必须要能旭东硬件，这样应用程序才能够使用该硬件功能；</li>
+<li>一般来说，操作系统会提供开发接口，让开发商制作他们的驱动程序；</li>
+<li>要使用新硬件功能，必须要安装厂商提供的驱动程序才行</li>
+<li>驱动程序是由厂商提供的，与操作系统开发者无关</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h3><h2 id="划重点"><a href="#划重点" class="headerlink" title="划重点"></a>划重点</h2><ul>
+<li>计算机的定义：“接收使用者输入指令与数据，经由中央处理器的数学与逻辑单元运算处理后，以产生或存储成游泳的信息”；</li>
+<li>计算机的五大单元<ul>
+<li>输入单元</li>
+<li>输出单元</li>
+<li>控制单元</li>
+<li>算数逻辑单元</li>
+<li>存储单元</li>
+</ul>
+</li>
+<li>CPU占有控制、算数逻辑单元，存储单元包含内存与辅助内存；</li>
+<li>CPU发出命令使数据流入/流出内存，而CPU实际要处理的数据则完全来自于内存；</li>
+<li>CPU依设计理念主要分为：精简指令集(RISC)和复杂指令集(CISC)系统；</li>
+<li>CPU的频率 = 外频 * 倍频<ul>
+<li>外频：CPU与外部元件进行数据传输时的速度</li>
+<li>倍频：CPU内部用来加速工作性能的倍数</li>
+</ul>
+</li>
+<li>新的CPU设计中，已经将北桥的内存控制芯片整合到CPU内，而CPU与内存、显卡沟通的总线通常称为系统总线。南桥就是所谓的输入输出(I/O)总线，主要在连接硬盘、USB、网卡等周边设备；</li>
+<li>CPU每次能够处理的数据量称为字长(word size)，字长大小依据CPU的设计而有32位和64位。我们现在所说的32位或64位电脑主要是依据CPU的字长而决定的；</li>
+<li>个人电脑的内存主要部件为动态随机存取内存(Dynamic Random Access Memory, DRAM)，至于CPU内部的第二层告诉缓存则使用静态随机存取内存(Static Random Access Memory, SRAM)；</li>
+<li>BIOS(Basic Input Output System)是一套程序，这套程序是写死到主板上的一个内存芯片中，这个内存在没有通电时也能保存数据，这个内存叫做只读存储器(Read Only Memory, ROM)。</li>
+<li>目前主流的外接卡接口大多为PCIe接口；</li>
+<li>常见的显卡连接到屏幕的接口有HDMI/DVI/D-Sub/Display port等等。HDMI可同时传送影像和声音；</li>
+<li>传动硬盘的组成为：圆形盘片、机械手臂、磁头与主轴马达，其中盘片的组成为扇区、磁道与柱面；</li>
+<li>磁盘连接到主板的接口大多为SATA或SAS;</li>
+<li>常见的文字编码为ASCII，中文编码主要有Big5(繁体中文)和UTF-8(繁体中文和简体中文)，目前主流为UTF-8；</li>
+<li>操作系统(Operating System, OS)其实也是一组程序，这组程序的终点在于管理电脑的所有活动以及驱动系统中的所有硬件；</li>
+<li>电脑主要以二进制作为单位，常用的磁盘容量单位为Bytes，其换算公式为 1 Byte = 8bits</li>
+<li>最纯净的操作系统尽在驱动与管理硬件，而要使用硬件时，就需要通过应用软件或者是壳程序(Shell)的功能来调用操作系统操作硬件工作。目前称为操作系统的，除了上述功能外，通常已经半酣了日常工作所需要的应用软件在内了。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/25/目录/" rel="next" title="目录">
+                <i class="fa fa-chevron-left"></i> 目录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/13/《疯狂Android讲义》读书笔记（一）/" rel="prev" title="《疯狂Android讲义》读书笔记（一）">
+                《疯狂Android讲义》读书笔记（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">老易</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yiguohan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yiguohan" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/yiguohan" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/519920207" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第零章-计算机概论"><span class="nav-number">1.</span> <span class="nav-text">第零章 计算机概论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机：辅助人脑的好工具"><span class="nav-number">1.1.</span> <span class="nav-text">计算机：辅助人脑的好工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机硬件的五大单元"><span class="nav-number">1.1.1.</span> <span class="nav-text">计算机硬件的五大单元</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU-的种类"><span class="nav-number">1.1.2.</span> <span class="nav-text">CPU 的种类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周边设备"><span class="nav-number">1.1.3.</span> <span class="nav-text">周边设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作流程"><span class="nav-number">1.1.4.</span> <span class="nav-text">操作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机分类"><span class="nav-number">1.1.5.</span> <span class="nav-text">计算机分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机上常用的计算单位"><span class="nav-number">1.1.6.</span> <span class="nav-text">计算机上常用的计算单位</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#个人计算机架构与周边设备"><span class="nav-number">1.2.</span> <span class="nav-text">个人计算机架构与周边设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU"><span class="nav-number">1.2.1.</span> <span class="nav-text">CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存"><span class="nav-number">1.2.2.</span> <span class="nav-text">内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显卡"><span class="nav-number">1.2.3.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬盘与存储设备"><span class="nav-number">1.2.4.</span> <span class="nav-text">硬盘与存储设备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展卡与接口"><span class="nav-number">1.2.5.</span> <span class="nav-text">扩展卡与接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主板"><span class="nav-number">1.2.6.</span> <span class="nav-text">主板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表示方式"><span class="nav-number">1.3.</span> <span class="nav-text">数据表示方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字系统"><span class="nav-number">1.3.1.</span> <span class="nav-text">数字系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文字编码系统"><span class="nav-number">1.3.2.</span> <span class="nav-text">文字编码系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件程序运行"><span class="nav-number">1.4.</span> <span class="nav-text">软件程序运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器程序与编译程序"><span class="nav-number">1.4.1.</span> <span class="nav-text">机器程序与编译程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作系统"><span class="nav-number">1.4.2.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序"><span class="nav-number">1.4.3.</span> <span class="nav-text">应用程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划重点"><span class="nav-number">1.5.</span> <span class="nav-text">划重点</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老易</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65215428";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1519541622000', 
+            owner: 'yiguohan',
+            repo: 'yiguohan.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'f12aa205b4be0d0234462686269f2a1ca2d0e324',
+            
+                client_id: 'a26bc09f631622a6c4dc'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

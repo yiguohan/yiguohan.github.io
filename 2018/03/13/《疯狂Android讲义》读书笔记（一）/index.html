@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Android,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一章 Android应用和开发环境Android的发展和历史Android是由Andy Rubin创立的一个手机操作系统，后来被Google收购。Google希望与各方共同建立一个标准化、开放式的移动电话软件平台，从而在移动产业内形成一个开放式的操作平台。 Android的发展和简介 Android不是Google创造的，而是Android公司创造的，该公司的创始人是Andy Rubin。公司">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《疯狂Android讲义》读书笔记（一）">
+<meta property="og:url" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/index.html">
+<meta property="og:site_name" content="老易的博客">
+<meta property="og:description" content="第一章 Android应用和开发环境Android的发展和历史Android是由Andy Rubin创立的一个手机操作系统，后来被Google收购。Google希望与各方共同建立一个标准化、开放式的移动电话软件平台，从而在移动产业内形成一个开放式的操作平台。 Android的发展和简介 Android不是Google创造的，而是Android公司创造的，该公司的创始人是Andy Rubin。公司">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-stack.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-1.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-2.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-3.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-4.png">
+<meta property="og:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-5.png">
+<meta property="og:updated_time" content="2018-03-13T08:17:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《疯狂Android讲义》读书笔记（一）">
+<meta name="twitter:description" content="第一章 Android应用和开发环境Android的发展和历史Android是由Andy Rubin创立的一个手机操作系统，后来被Google收购。Google希望与各方共同建立一个标准化、开放式的移动电话软件平台，从而在移动产业内形成一个开放式的操作平台。 Android的发展和简介 Android不是Google创造的，而是Android公司创造的，该公司的创始人是Andy Rubin。公司">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-stack.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/">
+
+
+
+
+
+  <title>《疯狂Android讲义》读书笔记（一） | 老易的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">老易的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大口吃瓜 快意飞马</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/《疯狂Android讲义》读书笔记（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老易">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="老易的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">《疯狂Android讲义》读书笔记（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T16:07:25+08:00">
+                2018-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/13/《疯狂Android讲义》读书笔记（一）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/13/《疯狂Android讲义》读书笔记（一）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第一章-Android应用和开发环境"><a href="#第一章-Android应用和开发环境" class="headerlink" title="第一章 Android应用和开发环境"></a>第一章 Android应用和开发环境</h1><h2 id="Android的发展和历史"><a href="#Android的发展和历史" class="headerlink" title="Android的发展和历史"></a>Android的发展和历史</h2><p>Android是由Andy Rubin创立的一个手机操作系统，后来被Google收购。Google希望与各方共同建立一个标准化、开放式的移动电话软件平台，从而在移动产业内形成一个开放式的操作平台。</p>
+<h3 id="Android的发展和简介"><a href="#Android的发展和简介" class="headerlink" title="Android的发展和简介"></a>Android的发展和简介</h3><ul>
+<li>Android不是Google创造的，而是Android公司创造的，该公司的创始人是Andy Rubin。公司后来被Google收购，而Andy Rubin也成为Google的Android项目产品负责人。</li>
+<li>Google与2007年11月5日发布了Android1.0操作系统。</li>
+<li>目前Android已经成为一个重要的手机操作系统。当前市场常见的操作系统如下：<ul>
+<li>iOS</li>
+<li>Windows Phone</li>
+<li>BlackBerry</li>
+<li>Symbian</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>事实上，Android已经超出了手机操作系统的范畴，Android系统已经广泛应用于TV、手表以及各种可穿戴设备。</p>
+</blockquote>
+<h3 id="Android-平台架构及特性"><a href="#Android-平台架构及特性" class="headerlink" title="Android 平台架构及特性"></a>Android 平台架构及特性</h3><p>Android 系统的底层建立在Linux系统之上，该平台由操作系统、中间件、用户界面和应用软件4层组成，采用软件叠层(Software Stack)的方式进行构建。这种结构使曾与层之间互相分离，明确各层分工，保证了低耦合。</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-stack.png" alt="平台架构"></p>
+<ul>
+<li>系统应用 (System Apps)：Android 系统将会包含一系列的核心应用程序</li>
+<li>Java API 框架 (Java API Framework)：提供对接底层的大量接口框架，供开发者使用。</li>
+<li>原生 C/C++ 函数库 (Native C/C++ Libraries)：Android 包含一套被不同组件使用的C/C++库的集合。应用开发者不能直接调用这个库集，但可以通过上面的应用程序框架来调用。<ul>
+<li>系统C库：从BSD系统派生出来的标准C系统库，并且专门为嵌入式Linux设备调整过</li>
+<li>媒体库：基于PacketVideo的OpenCORE，这套媒体库支持播放和录制许多流行的音频和视频格式</li>
+<li>Surface Manager：管理对显示子系统的访问，并可以对多个应用程序的2D和3D图层提供无缝整合</li>
+<li>LibWebCore：Web浏览器引擎，该引擎为Android浏览器提供支持，也为WebView提供支持</li>
+<li>SGL：底层的2D图形引擎</li>
+<li>3D Libraries：基于OpenGL ES API实现的3D系统</li>
+<li>Free Type：位图和向量字体显示</li>
+<li>SQLite：供所有应用程序使用的功能强大的轻量级关系数据库</li>
+</ul>
+</li>
+<li>Android 运行时 (Android Runtime)<ul>
+<li>Android 核心库集：提供 Java API 框架使用的 Java 编程语言大部分功能</li>
+<li>ART(Android Runtime)：<ul>
+<li>预先(AOT)和即时(JIT)编译</li>
+<li>优化的垃圾回收(GC)</li>
+<li>更好的调试支持，包括专用采样分析器、详细的诊断异常和崩溃报告，并且能够设置检视点以监控特定字段</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>硬件抽象层 (HAL)</li>
+</ul>
+<blockquote>
+<p>硬件抽象层提供标准界面，向更高级别的Java API框架显示设备硬件功能。HAL包含多个库模块，其中每个模块都为特定类型的硬件组件实现一个界面，例如相机或蓝牙模块。当框架API要求访问设备硬件时，Android系统将为该硬件组件加载库模块。</p>
+</blockquote>
+<ul>
+<li>Linux内核 (Linux Kernel)</li>
+</ul>
+<blockquote>
+<p>Android 平台的基础是 Linux 内核。使用Linux内核可以让Android利用主要安全功能，并且允许设备制造商为注明的内核开发硬件驱动程序。</p>
+</blockquote>
+<h2 id="搭建Android开发环境"><a href="#搭建Android开发环境" class="headerlink" title="搭建Android开发环境"></a>搭建Android开发环境</h2><ul>
+<li>Android Studio 是由Google开发的基于IntelliJ IDEA的Android 官方IDE，可在<a href="http://developer.android.com" target="_blank" rel="noopener">谷歌开发者网站</a>下载获取。</li>
+<li>Android Studio的项目相当于一个工作空间，一个工作空间可包含多个模块，每个模块对应一个Android项目。</li>
+</ul>
+<h2 id="Android-常用开发工具的用法"><a href="#Android-常用开发工具的用法" class="headerlink" title="Android 常用开发工具的用法"></a>Android 常用开发工具的用法</h2><h3 id="Mac环境下配置ADB环境变量"><a href="#Mac环境下配置ADB环境变量" class="headerlink" title="Mac环境下配置ADB环境变量"></a>Mac环境下配置ADB环境变量</h3><blockquote>
+<p>Mac下需要手动配置才能运行Android SDK platform-tools 中的命令</p>
+</blockquote>
+<ul>
+<li>启动Mac终端Terminal在命令行中输入以下三行命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;export ANDROID_HOME=/Users/$USER/Library/Android/sdk&apos; &gt;&gt; ~/.bash_profile</span><br><span class="line">echo &apos;export PATH=$&#123;PATH&#125;:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools&apos; &gt;&gt; ~/.bash_profile</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h3 id="在命令行创建、删除和浏览AVD"><a href="#在命令行创建、删除和浏览AVD" class="headerlink" title="在命令行创建、删除和浏览AVD"></a>在命令行创建、删除和浏览AVD</h3><p>在命令行下管理AVD需要借助于<code>android</code>命令（位于 Android SDK 安装目录的tools子目录下），如果直接执行<code>android</code>命令将会启动Android SDK管理器，除此之外还有以下命令</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>列出机器上所有已经安装的Android版本和AVD设备</td>
+</tr>
+<tr>
+<td>ist avd</td>
+<td>列出机器上所有已经安装的AVD设备</td>
+</tr>
+<tr>
+<td>list target</td>
+<td>列出机器上所有已经安装Android版本</td>
+</tr>
+<tr>
+<td>create avd</td>
+<td>创建一个AVD设备</td>
+</tr>
+<tr>
+<td>move avd</td>
+<td>移动或重命名一个AVD设备</td>
+</tr>
+<tr>
+<td>delete avd</td>
+<td>删除一个AVD设备</td>
+</tr>
+<tr>
+<td>update avd</td>
+<td>升级一个AVD设备使之符合新的SDK环境</td>
+</tr>
+<tr>
+<td>create project</td>
+<td>创建一个新的Android项目</td>
+</tr>
+<tr>
+<td>create test-project</td>
+<td>创建一个新的Android测试项目</td>
+</tr>
+<tr>
+<td>update test-project</td>
+<td>更新一个已有的Android测试项目</td>
+</tr>
+</tbody>
+</table>
+<p>如果需要创建一个全新的AVD设备，可执行如下命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android create avd -n &lt;avd名称&gt; -t &lt;Android 版本&gt; -b &lt;CPU 架构&gt; -p &lt;AVD 设备保存位置&gt; -s &lt;选择AVD皮肤&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="使用真机进行调试"><a href="#使用真机进行调试" class="headerlink" title="使用真机进行调试"></a>使用真机进行调试</h3><ul>
+<li>使用真机进行调试<ul>
+<li>打开<code>开发者模式</code></li>
+<li>打开<code>允许USB调试</code></li>
+</ul>
+</li>
+<li>使用真机进行无线调试<ul>
+<li>首先确认电脑与真机在同一个Wifi条件下</li>
+<li>有线连接真机</li>
+<li>输入命令<code>adb tcpip 5555</code></li>
+<li>输入命令<code>adb connect</code>+手机连接WiFi所分配的IP地址+<code>5555</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Android-Debug-Bridge-ADB-的用法"><a href="#Android-Debug-Bridge-ADB-的用法" class="headerlink" title="Android Debug Bridge (ADB) 的用法"></a>Android Debug Bridge (ADB) 的用法</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>adb devices</code></td>
+<td>查看当前运行的模拟器</td>
+</tr>
+<tr>
+<td><code>adb push [电脑文件的路径] [手机(或模拟器)的路径]</code></td>
+<td>电脑文件复制到手机或模拟器</td>
+</tr>
+<tr>
+<td><code>adb pull [手机(或模拟器)的路径] [电脑文件的路径]</code></td>
+<td>手机上的文件复制到电脑</td>
+</tr>
+<tr>
+<td><code>adb shell</code></td>
+<td>启动模拟器的shell窗口</td>
+</tr>
+<tr>
+<td><code>adb install [-r] [-s] &lt;file&gt;</code></td>
+<td>安装APK程序(-r表示重新安装，-s表示安装到SD卡上)</td>
+</tr>
+<tr>
+<td><code>adb uninstall [-k] &lt;package&gt;</code></td>
+<td>卸载<code>&lt;package&gt;</code>所代表的应用程序，-k表示只删除应用程序，数据和目录保留</td>
+</tr>
+<tr>
+<td><code>mksdcard [-l label] &lt;size&gt; &lt;file&gt;</code></td>
+<td>创建虚拟存储卡。<code>&lt;size&gt;</code>指定SD卡大小，<code>&lt;file&gt;</code>指定保存虚拟SD卡的文件镜像</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Android-应用结构分析"><a href="#Android-应用结构分析" class="headerlink" title="Android 应用结构分析"></a>Android 应用结构分析</h2><ul>
+<li>build：Android Studio开发生成的各种源文件（包括R.java文件也放在该目录的子目录下）。</li>
+<li>lib：存储Android项目所需的第三方JAR包</li>
+<li>src 存储Android项目开发中的各种源文件<ul>
+<li>各种Java源文件（放在main/java子目录下）</li>
+<li>各种资源文件（放在main/res目录下）<ul>
+<li>layout 布局文件</li>
+<li>values 各种XML格式的资源文件<ul>
+<li>string.xml 字符串资源文件</li>
+<li>colors.xml 颜色资源文件</li>
+<li>dimens.xml 尺寸资源文件</li>
+</ul>
+</li>
+<li>drawable 存放图片文件（根据ldpi/mdpi/hdpi/xhdip等来存放不同分辨率的文件）</li>
+</ul>
+</li>
+<li>AndroidManifest.xml文件<ul>
+<li>Android项目的系统清单文件，用于控制Android应用的名称、图标、访问权限等曾提属性。</li>
+<li>Android应用的Activity/Service/ContentProvider/BroadcastReceiver都需要在其中配置</li>
+</ul>
+</li>
+<li>androidTest 存放Android测试项目</li>
+</ul>
+</li>
+</ul>
+<h3 id="应用程序权限说明"><a href="#应用程序权限说明" class="headerlink" title="应用程序权限说明"></a>应用程序权限说明</h3><blockquote>
+<p>通过为<code>&lt;mainifest.../&gt;</code>元素添加<code>&lt;uses-permission.../&gt;</code>子元素即可为程序本身声明权限</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACCESS_NETWORK_STATE</td>
+<td>允许应用程序获取网络状态信息的权限</td>
+</tr>
+<tr>
+<td>ACCESS_WIFI_STATE</td>
+<td>允许应用程序获取WiFi网络状态信息的权限</td>
+</tr>
+<tr>
+<td>BATTERY_STATS</td>
+<td>允许应用程序获取电池状态信息的权限</td>
+</tr>
+<tr>
+<td>BLUETOOTH</td>
+<td>允许应用程序连接匹配的蓝牙设备的权限</td>
+</tr>
+<tr>
+<td>BLUETOOTH_ADMIN</td>
+<td>允许应用程序发现匹配的蓝牙设备的权限</td>
+</tr>
+<tr>
+<td>BROADCAST_SMS</td>
+<td>允许应用程序广播收到短信提醒的权限</td>
+</tr>
+<tr>
+<td>CALL_PHONE</td>
+<td>允许应用程序拨打电话的权限</td>
+</tr>
+<tr>
+<td>CAMERA</td>
+<td>允许应用程序使用照相机的权限</td>
+</tr>
+<tr>
+<td>CHANGE_NETWORK_STATE</td>
+<td>允许应用程序改变网络连接状态的权限</td>
+</tr>
+<tr>
+<td>CHANGE_WIFI_STATE</td>
+<td>允许应用程序改变WiFi网络连接状态的权限</td>
+</tr>
+<tr>
+<td>DELETE_CACHE_FILES</td>
+<td>允许应用程序删除缓存文件的权限</td>
+</tr>
+<tr>
+<td>DELETE_PACKAGES</td>
+<td>允许应用程序删除安装包的权限</td>
+</tr>
+<tr>
+<td>FLASHLIGHT</td>
+<td>允许应用程序使用闪光灯的权限</td>
+</tr>
+<tr>
+<td>INTERNET</td>
+<td>允许应用程序打开网络Socket的权限</td>
+</tr>
+<tr>
+<td>MODIFY_AUDIO_SETTINGS</td>
+<td>允许应用程序修改全局声音设置的权限</td>
+</tr>
+<tr>
+<td>PROCESS_OUTGOING_CALLS</td>
+<td>允许应用程序监听、控制、取消呼出电话的权限</td>
+</tr>
+<tr>
+<td>READ_CONTACTS</td>
+<td>允许应用程序读取用户联系人数据的权限</td>
+</tr>
+<tr>
+<td>READ_HISTORY_BOOKMARKS</td>
+<td>允许应用程序读取历史书签的权限</td>
+</tr>
+<tr>
+<td>READ_OWNER_DATA</td>
+<td>允许应用程序读取用户数据的权限</td>
+</tr>
+<tr>
+<td>READ_PHONE_STATE</td>
+<td>允许应用程序读取电话状态的权限</td>
+</tr>
+<tr>
+<td>READ_PHONE_SMS</td>
+<td>允许应用程序读取短信的权限</td>
+</tr>
+<tr>
+<td>REBOOT</td>
+<td>允许应用程序重启系统的权限</td>
+</tr>
+<tr>
+<td>RECEIVE_MMS</td>
+<td>允许应用程序接收、监控、处理彩信的权限</td>
+</tr>
+<tr>
+<td>RECEIVE_SMS</td>
+<td>允许应用程序接收、监控、处理短信的权限</td>
+</tr>
+<tr>
+<td>RECORD_AUDIO</td>
+<td>允许应用程序录音的权限</td>
+</tr>
+<tr>
+<td>SEND_SMS</td>
+<td>允许应用程序发送短信的权限</td>
+</tr>
+<tr>
+<td>SET_ORIENTATION</td>
+<td>允许应用程序旋转屏幕的权限</td>
+</tr>
+<tr>
+<td>SET_TIME</td>
+<td>允许应用程序设置时间的权限</td>
+</tr>
+<tr>
+<td>SET_TIME_ZONE</td>
+<td>允许应用程序设置时区的权限</td>
+</tr>
+<tr>
+<td>SET_WALLPAPER</td>
+<td>允许应用程序设置桌面壁纸的权限</td>
+</tr>
+<tr>
+<td>VIBRATE</td>
+<td>允许应用程序控制震动的权限</td>
+</tr>
+<tr>
+<td>WRITE_CONTACTS</td>
+<td>允许应用程序写入用户联系人的权限</td>
+</tr>
+<tr>
+<td>WRITE_HISTORY_BOOKMARKS</td>
+<td>允许应用程序写历史书签的权限</td>
+</tr>
+<tr>
+<td>WRITE_OWNER_DATA</td>
+<td>允许应用程序写用户数据的权限</td>
+</tr>
+<tr>
+<td>WRITE_SMS</td>
+<td>允许应用程序写短信的权限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Android应用的基本组件介绍"><a href="#Android应用的基本组件介绍" class="headerlink" title="Android应用的基本组件介绍"></a>Android应用的基本组件介绍</h2><h3 id="Activity和View"><a href="#Activity和View" class="headerlink" title="Activity和View"></a>Activity和View</h3><ul>
+<li>Activity<ul>
+<li>Android应用中负责与用户交互的组件，通过setContentView(View)来显示指定组件</li>
+<li>Activity是Window的容器，Activity包含一个getWindow()方法，返回该Acitivty所包含的窗口</li>
+<li>Activity包含一个setTheme(int resid)方法来设置其窗口风格。如是否显示ActionBar，以对话框形式显示窗口</li>
+</ul>
+</li>
+<li>View是所有UI控件、容器控件的基类，是用户实实在在看到的部分</li>
+</ul>
+<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>Service通常位于后台运行，一般不与用户交互，与Activity的地位并列。</p>
+<h3 id="BroadcastReceiver"><a href="#BroadcastReceiver" class="headerlink" title="BroadcastReceiver"></a>BroadcastReceiver</h3><p>类似于事件编程的监听器，不同之处在于BroadcastReceiver监听的事件源是Android应用中的其他组件</p>
+<p>实现流程大致如下：</p>
+<ul>
+<li>实现BroadcastReceiver子类，重写onReceive(Context context,Intent intent)</li>
+<li>注册系统级的“事件监听器”（两种方式）<ul>
+<li>Java代码中通过Context.registerReceiver()方法注册BroadcastReceiver</li>
+<li>AndroidManifest.xml文件中使用<code>&lt;receiver.../&gt;</code>元素完成注册</li>
+</ul>
+</li>
+<li>当其他组件通过sentBroadcast()/sendStickyBroadcast()/sendOrderedBroadcast()方法发送广播消息，如果该BroadcastReceiver也对该消息感兴趣(IntentFilter过滤)，onReceive(Context context,Intent intent)方法将会被触发</li>
+</ul>
+<h3 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h3><p>Android应用之间是相互独立的，应用可以通过ContentProvider向其他应用提供一些可以暴露的数据接口，以实现多个应用程序之间的数据交换。</p>
+<p>ContentProvider需要实现以下抽象方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insert(Uri,ContentValues)</td>
+<td>向ContentProvider插入数据</td>
+</tr>
+<tr>
+<td>delete(Uri,ContentValues)</td>
+<td>删除ContentProvider中指定数据</td>
+</tr>
+<tr>
+<td>update(Uri,ContentValues,String,String[])</td>
+<td>更新ContentProvider中指定数据</td>
+</tr>
+<tr>
+<td>query(Uri,String[],String,String[],String)</td>
+<td>从ContentProvider查询数据</td>
+</tr>
+</tbody>
+</table>
+<p>通常ContentProvider需要结合ContentResolver一起使用，一个应用程序使用ContentProvider暴露自己的数据，而另一个通过ContentResolver来访问数据</p>
+<h3 id="Intent和IntentFilter"><a href="#Intent和IntentFilter" class="headerlink" title="Intent和IntentFilter"></a>Intent和IntentFilter</h3><p>Intent是Android应用内不同组件之间通信的载体</p>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>启动 Activity</code></td>
+<td>调用<code>Context</code>的<code>startActivity(Intent intent)</code>/<code>startActivityForResult(Intent intent, int requestCode)</code>，向Intent中封装好指定Activity信息来启动Activity</td>
+</tr>
+<tr>
+<td><code>启动 Service</code></td>
+<td>调用<code>Context</code>的<code>startService(Intent intent)</code>/<code>bindService(Intent service,ServiceConnetion conn, int flags)</code>，向Intent中封装好指定Service信息来启动Service</td>
+</tr>
+<tr>
+<td><code>触发 BroadcastReceiver</code></td>
+<td>调用<code>Context</code>的<code>sendBroadcast(Intent intent)</code>/<code>sendStickyBroadcast(Intent intent)</code>/<code>sendOrderedBroadcast(Intent intent, String receiverPermission)</code>方法来发送广播消息，Intent封装了触发目标BroadcastReceiver的信息</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>显式Intent：明确指定需要启动或者触发的组件的类名</li>
+<li>隐式Intent：指定需要启动或者触发的组件满足怎样的条件(Intent Filter)</li>
+</ul>
+<h2 id="签名Android应用程序"><a href="#签名Android应用程序" class="headerlink" title="签名Android应用程序"></a>签名Android应用程序</h2><p>签名的作用：</p>
+<ul>
+<li>确定发布者的身份。</li>
+<li>确保应用的完整性。</li>
+</ul>
+<h3 id="使用Android-Studio对-Android-应用签名"><a href="#使用Android-Studio对-Android-应用签名" class="headerlink" title="使用Android Studio对 Android 应用签名"></a>使用Android Studio对 Android 应用签名</h3><p>单击菜单中的 Build -&gt; Generate Signed APK 选择需要打包的Module</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-1.png" alt="Signature Step 1"></p>
+<p>首次创建签名需要新建一个存放Key的地址Key Store Path</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-2.png" alt="Signature Step 2"></p>
+<p>设置Key Store的密码</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-3.png" alt="Signature Step 3"></p>
+<p>设置Key 的相关参数和密码</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-4.png" alt="Signature Step 4"></p>
+<p>选择apk生成的地址、类型(release/debug)，点击Finish生成Apk</p>
+<p><img src="/2018/03/13/《疯狂Android讲义》读书笔记（一）/android-signature-step-5.png" alt="Signature Step 5"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/25/《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）/" rel="next" title="《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）">
+                <i class="fa fa-chevron-left"></i> 《鸟哥的Linux私房菜：基础学习篇》读书笔记（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/10/Android开发规范/" rel="prev" title="Android开发规范">
+                Android开发规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">老易</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yiguohan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yiguohan" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/yiguohan" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/519920207" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-Android应用和开发环境"><span class="nav-number">1.</span> <span class="nav-text">第一章 Android应用和开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android的发展和历史"><span class="nav-number">1.1.</span> <span class="nav-text">Android的发展和历史</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android的发展和简介"><span class="nav-number">1.1.1.</span> <span class="nav-text">Android的发展和简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-平台架构及特性"><span class="nav-number">1.1.2.</span> <span class="nav-text">Android 平台架构及特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建Android开发环境"><span class="nav-number">1.2.</span> <span class="nav-text">搭建Android开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-常用开发工具的用法"><span class="nav-number">1.3.</span> <span class="nav-text">Android 常用开发工具的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mac环境下配置ADB环境变量"><span class="nav-number">1.3.1.</span> <span class="nav-text">Mac环境下配置ADB环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在命令行创建、删除和浏览AVD"><span class="nav-number">1.3.2.</span> <span class="nav-text">在命令行创建、删除和浏览AVD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用真机进行调试"><span class="nav-number">1.3.3.</span> <span class="nav-text">使用真机进行调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-Debug-Bridge-ADB-的用法"><span class="nav-number">1.3.4.</span> <span class="nav-text">Android Debug Bridge (ADB) 的用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-应用结构分析"><span class="nav-number">1.4.</span> <span class="nav-text">Android 应用结构分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序权限说明"><span class="nav-number">1.4.1.</span> <span class="nav-text">应用程序权限说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android应用的基本组件介绍"><span class="nav-number">1.5.</span> <span class="nav-text">Android应用的基本组件介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Activity和View"><span class="nav-number">1.5.1.</span> <span class="nav-text">Activity和View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service"><span class="nav-number">1.5.2.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BroadcastReceiver"><span class="nav-number">1.5.3.</span> <span class="nav-text">BroadcastReceiver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentProvider"><span class="nav-number">1.5.4.</span> <span class="nav-text">ContentProvider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Intent和IntentFilter"><span class="nav-number">1.5.5.</span> <span class="nav-text">Intent和IntentFilter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名Android应用程序"><span class="nav-number">1.6.</span> <span class="nav-text">签名Android应用程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Android-Studio对-Android-应用签名"><span class="nav-number">1.6.1.</span> <span class="nav-text">使用Android Studio对 Android 应用签名</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老易</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65215428";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1520928445000', 
+            owner: 'yiguohan',
+            repo: 'yiguohan.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'f12aa205b4be0d0234462686269f2a1ca2d0e324',
+            
+                client_id: 'a26bc09f631622a6c4dc'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

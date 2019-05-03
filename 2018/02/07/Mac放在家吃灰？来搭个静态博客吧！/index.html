@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="DIY,博客,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="去年买了台 Macbook pro 2017 Touchbar version，美其名曰 Coding ，然而现在每天放在出租屋里吃灰，下班后也是偶尔看看 Youtube 和小姐姐们直播。 Android Studio 也是好久没有打开啦。 所以,今天懒癌博主就带大家来看看怎样变废为宝——在 Mac 上搭建基于 Node.js+Hexo+Github Pages 的静态博客。 1. 准备 Mac">
+<meta name="keywords" content="DIY,博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac放在家吃灰？来搭个静态博客吧！">
+<meta property="og:url" content="http://yoursite.com/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/index.html">
+<meta property="og:site_name" content="老易的博客">
+<meta property="og:description" content="去年买了台 Macbook pro 2017 Touchbar version，美其名曰 Coding ，然而现在每天放在出租屋里吃灰，下班后也是偶尔看看 Youtube 和小姐姐们直播。 Android Studio 也是好久没有打开啦。 所以,今天懒癌博主就带大家来看看怎样变废为宝——在 Mac 上搭建基于 Node.js+Hexo+Github Pages 的静态博客。 1. 准备 Mac">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/helloHexo.jpg">
+<meta property="og:updated_time" content="2018-02-07T08:43:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac放在家吃灰？来搭个静态博客吧！">
+<meta name="twitter:description" content="去年买了台 Macbook pro 2017 Touchbar version，美其名曰 Coding ，然而现在每天放在出租屋里吃灰，下班后也是偶尔看看 Youtube 和小姐姐们直播。 Android Studio 也是好久没有打开啦。 所以,今天懒癌博主就带大家来看看怎样变废为宝——在 Mac 上搭建基于 Node.js+Hexo+Github Pages 的静态博客。 1. 准备 Mac">
+<meta name="twitter:image" content="http://yoursite.com/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/helloHexo.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/">
+
+
+
+
+
+  <title>Mac放在家吃灰？来搭个静态博客吧！ | 老易的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">老易的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">大口吃瓜 快意飞马</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="老易">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="老易的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Mac放在家吃灰？来搭个静态博客吧！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T15:43:34+08:00">
+                2018-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Geek-Style/" itemprop="url" rel="index">
+                    <span itemprop="name">Geek Style</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>去年买了台 Macbook pro 2017 Touchbar version，美其名曰 Coding ，然而现在每天放在出租屋里吃灰，下班后也是偶尔看看 Youtube 和小姐姐们直播。</p>
+<p>Android Studio 也是好久没有打开啦。</p>
+<p>所以,今天懒癌博主就带大家来看看怎样变废为宝——在 Mac 上搭建基于 Node.js+Hexo+Github Pages 的静态博客。</p>
+<h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1. 准备"></a>1. 准备</h2><ul>
+<li><a href="https://www.apple.com/mac/" target="_blank" rel="noopener">Mac</a> 一台</li>
+<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> ( Mac 自带)</li>
+<li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a> 账号</li>
+</ul>
+<h2 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2. 安装Hexo"></a>2. 安装Hexo</h2><h3 id="2-1-打开-Terminal-输入以下命令："><a href="#2-1-打开-Terminal-输入以下命令：" class="headerlink" title="2.1 打开 Terminal 输入以下命令："></a>2.1 打开 Terminal 输入以下命令：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ su npm install hexo -g-cli</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：Hexo官网给出的命令是 <code>$ npm install hexo -g-cli</code> 但是在 Mac OS 环境下如果不使用管理员权限 <code>su</code> 很可能会因为权限不足导致安装失败</p>
+</blockquote>
+<ul>
+<li><code>su</code> 执行 Linux 管理员权限。</li>
+<li><code>npm</code> <a href="https://zh.wikipedia.org/wiki/Npm" target="_blank" rel="noopener">Node Package Manager</a> 的简称，它随Node.js一起安装，用于执行 Node.js 依赖的管理命令</li>
+<li><code>-g</code> 全局安装</li>
+<li><code>-cli</code> 安装hexo命令行</li>
+</ul>
+<h3 id="2-2-在-Terminal-中使用-cd-命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹："><a href="#2-2-在-Terminal-中使用-cd-命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹：" class="headerlink" title="2.2 在 Terminal 中使用 cd 命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹："></a>2.2 在 Terminal 中使用 cd 命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹：<br></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>init</code> 在当前所在文件夹中进行hexo初始化</li>
+<li><code>blog</code> 在当前路径下会生成一个名为 blog 的文件夹来存放 hexo 的相关资源文件，当然你也可以取其他的名字</li>
+</ul>
+<h3 id="2-3-等待初始化完成后，使用-cd-命令进入刚刚生成的-blog-文件夹中，输入以下命令，在当前路径下安装模板依赖："><a href="#2-3-等待初始化完成后，使用-cd-命令进入刚刚生成的-blog-文件夹中，输入以下命令，在当前路径下安装模板依赖：" class="headerlink" title="2.3 等待初始化完成后，使用 cd 命令进入刚刚生成的 blog 文件夹中，输入以下命令，在当前路径下安装模板依赖："></a>2.3 等待初始化完成后，使用 cd 命令进入刚刚生成的 blog 文件夹中，输入以下命令，在当前路径下安装模板依赖：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>安装完成后，从本地运行 Hexo Server 加载网页查看效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>等待部署完成后，打开浏览器地址输入 <a href="https://localhost:4000" target="_blank" rel="noopener">https://localhost:4000</a> 即可看到如下页面：</p>
+<p><img src="/2018/02/07/Mac放在家吃灰？来搭个静态博客吧！/helloHexo.jpg" alt="&quot;HelloHexo&quot;"></p>
+<h2 id="3-关联-GitHub"><a href="#3-关联-GitHub" class="headerlink" title="3. 关联 GitHub"></a>3. 关联 GitHub</h2><h3 id="3-1-添加-SSH-Key-到-GitHub"><a href="#3-1-添加-SSH-Key-到-GitHub" class="headerlink" title="3.1 添加 SSH Key 到 GitHub"></a>3.1 添加 SSH Key 到 GitHub</h3><h4 id="3-1-1-什么是SSH-Key"><a href="#3-1-1-什么是SSH-Key" class="headerlink" title="3.1.1 什么是SSH Key"></a>3.1.1 什么是SSH Key</h4><p>因为本文的重点不是SSH，所以我就不在这里赘述了。大概的意思呢就是我这里有一把钥匙(私钥)，GitHub 也有一把(公钥)，这是我和 GitHub 进行 PY 交易的暗号。当然这里叙述的比较简单片面，如果你对SSH感兴趣，不妨看看这两篇博客：</p>
+<p><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">阮一峰的网络日志 SSH原理与运用（一）：远程登录</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html" target="_blank" rel="noopener">阮一峰的网络日志 SSH原理与运用（二）：远程操作与端口转发</a></p>
+<h4 id="3-1-2-检查本地是否存在-SSH-Key"><a href="#3-1-2-检查本地是否存在-SSH-Key" class="headerlink" title="3.1.2 检查本地是否存在 SSH Key"></a>3.1.2 检查本地是否存在 SSH Key</h4><p>打开 Terminal 输入并执行以下命令，列出所有文件夹中以 <code>.ssh</code> 结尾的文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>如果列表中存在 <code>id_rsa.pub</code> 或 <code>id_dsa.pub</code> 文件，则可以直接调到到下面的步骤，如果不存在，就接着往下看</p>
+<h4 id="3-1-3-生成SSH-Key"><a href="#3-1-3-生成SSH-Key" class="headerlink" title="3.1.3 生成SSH Key"></a>3.1.3 生成SSH Key</h4><p>在 Terminal 中输入并执行一下命令，在本地生成新的公钥/密钥对，注意这里的 <a href="mailto:`your_email@email.com" target="_blank" rel="noopener">`your_email@email.com</a>` 要换成你自己的 git 用户名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@email.com&quot;</span><br></pre></td></tr></table></figure>
+<p>这样，系统会帮你生成一对密钥 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 。</p>
+<h4 id="3-1-4-在GitHub上添加SSH-Key"><a href="#3-1-4-在GitHub上添加SSH-Key" class="headerlink" title="3.1.4 在GitHub上添加SSH Key"></a>3.1.4 在GitHub上添加SSH Key</h4><ul>
+<li><p>Finder 前往默认的 生成地址 <code>~/.ssh/id_rsa.pub</code> 打开文件，复制其中的所有数据。</p>
+</li>
+<li><p>登陆 GitHub 前往 Settings -&gt; SSH and GPG Keys -&gt; 点击 SSH Keys 标题旁边的 New SSH Key 按钮</p>
+</li>
+<li><p>在Title中输入任意你认为可以标记的信息，在Key中粘贴刚才在本地.pub文件中复制的信息，点击 Add SSH Key 按钮。</p>
+</li>
+</ul>
+<h3 id="3-2-在GitHub上创建仓库"><a href="#3-2-在GitHub上创建仓库" class="headerlink" title="3.2 在GitHub上创建仓库"></a>3.2 在GitHub上创建仓库</h3><ul>
+<li>登陆GitHub 点击New Repository</li>
+<li>仓库名称 <code>username.github.io</code> (注意：此处的 <code>username</code> 改为你的 GitHub 用户名，并且只能是你的用户名，否则无法将网页托管在 GitHub Page 上。同时，每个 GitHub 账号只能在 GitHub Page上申请一个域名)</li>
+<li>勾选 <code>Initialize this repository with a README</code></li>
+<li>点击 <code>Create repository</code> 创建仓库</li>
+</ul>
+<h3 id="3-3-将本地的Hexo文件更新到GitHub仓库"><a href="#3-3-将本地的Hexo文件更新到GitHub仓库" class="headerlink" title="3.3 将本地的Hexo文件更新到GitHub仓库"></a>3.3 将本地的Hexo文件更新到GitHub仓库</h3><ul>
+<li>进入刚刚新建的 GitHub 仓库</li>
+<li>点击仓库页面右上角的 <code>Clone or download</code></li>
+<li>复制弹出文本框中的地址或者点击文本框右侧的复制图标( <code>Use HTTPS</code> 或 <code>Use SSH</code> 均可)</li>
+<li>在本地进入Hexo资源所在的目录找到根目录(划重点！是根目录，不是theme文件夹！)下的 <code>_config.yml</code> 文件，打开后找到末尾的 <code>deploy</code> 标签，修改成如下所示：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/yiguohan/yiguohan.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：此处repository标签后填写的是你的 GitHub 仓库地址</p>
+</blockquote>
+<h2 id="4-生成静态网页和部署"><a href="#4-生成静态网页和部署" class="headerlink" title="4. 生成静态网页和部署"></a>4. 生成静态网页和部署</h2><ul>
+<li>打开Terminal，使用cd命令进入Hexo资源所在的文件夹，输入以下命令生成静态网页：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo genrate</span><br></pre></td></tr></table></figure>
+<ul>
+<li>生成成功后，输入一下命令将生成好的网页部署到服务器上：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p><br>至此，博客已经基本搭建成功。如果你想了解更多关于 Hexo 静态博客的奇技淫巧，欢迎浏览 Hexo 的官方网站 </p>
+<p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a></p>
+<p>我(也许)也会在今后的博客中给大家带来相关的知识。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DIY/" rel="tag"># DIY</a>
+          
+            <a href="/tags/博客/" rel="tag"># 博客</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/30/写在前面/" rel="next" title="写在前面">
+                <i class="fa fa-chevron-left"></i> 写在前面
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/25/目录/" rel="prev" title="目录">
+                目录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">老易</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yiguohan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yiguohan" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/yiguohan" target="_blank" title="Facebook">
+                      
+                        <i class="fa fa-fw fa-facebook"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/519920207" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-准备"><span class="nav-number">1.</span> <span class="nav-text">1. 准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-打开-Terminal-输入以下命令："><span class="nav-number">2.1.</span> <span class="nav-text">2.1 打开 Terminal 输入以下命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-在-Terminal-中使用-cd-命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹："><span class="nav-number">2.2.</span> <span class="nav-text">2.2 在 Terminal 中使用 cd 命令进入到你想要存放网页资源的本地文件夹，输入以下命令，初始化资源文件夹：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-等待初始化完成后，使用-cd-命令进入刚刚生成的-blog-文件夹中，输入以下命令，在当前路径下安装模板依赖："><span class="nav-number">2.3.</span> <span class="nav-text">2.3 等待初始化完成后，使用 cd 命令进入刚刚生成的 blog 文件夹中，输入以下命令，在当前路径下安装模板依赖：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-GitHub"><span class="nav-number">3.</span> <span class="nav-text">3. 关联 GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-添加-SSH-Key-到-GitHub"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 添加 SSH Key 到 GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-什么是SSH-Key"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 什么是SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-检查本地是否存在-SSH-Key"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 检查本地是否存在 SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-生成SSH-Key"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 生成SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-在GitHub上添加SSH-Key"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4 在GitHub上添加SSH Key</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-在GitHub上创建仓库"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 在GitHub上创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-将本地的Hexo文件更新到GitHub仓库"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 将本地的Hexo文件更新到GitHub仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-生成静态网页和部署"><span class="nav-number">4.</span> <span class="nav-text">4. 生成静态网页和部署</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">老易</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65215428";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: '1517989414000', 
+            owner: 'yiguohan',
+            repo: 'yiguohan.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'f12aa205b4be0d0234462686269f2a1ca2d0e324',
+            
+                client_id: 'a26bc09f631622a6c4dc'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
